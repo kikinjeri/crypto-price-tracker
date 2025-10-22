@@ -51,7 +51,7 @@ Light/Dark mode toggle
 ### ✅ Notes:
 
 1. **Screenshot placeholder:**  
-   - Path: `images/Screenshot .png`  
+   - Path: `images/Screenshot.png`  
    - You can replace it with your actual screenshot.  
 
 2. **Polished formatting:**  

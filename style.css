@@ -1,275 +1,125 @@
-<<<<<<< HEAD
-/* ============================
-   BASE STYLES
-============================ */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+
+/* ===== Global Styles ===== */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: "Poppins", Arial, sans-serif;
+  background: #0b0f16;
+  color: #e0e0e0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #121212;
-    color: #e0e0e0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+/* ===== Header ===== */
+.header {
+  width: 100%;
+  background:  #00c896;
+  color: #fff;
+  text-align: center;
+  padding: 20px 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-/* ============================
-   HEADER
-============================ */
-header.header {
-    width: 100%;
-    background: linear-gradient(90deg, #00b894, #00cec9);
-    color: #fff;
-    position: sticky;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    padding: 15px 20px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+.header h1 {
+  margin: 0;
+  font-size: 1.5rem;
 }
 
-header h1 {
-    font-size: 1.8rem;
+.filter label {
+  font-weight: bold;
+  margin-right: 10px;
 }
 
-/* ============================
-   TABLE CONTROLS
-============================ */
-.table-controls {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin: 20px 0;
+.filter select {
+  padding: 8px 12px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  background: #fff;
+  color: #333;
+  cursor: pointer;
 }
 
-.table-controls input[type="text"] {
-    padding: 8px 12px;
-    border-radius: 6px;
-    border: none;
-    width: 250px;
-    max-width: 100%;
-    font-size: 1rem;
-    margin-bottom: 10px;
+/* ===== Container ===== */
+.container {
+  margin-top: 120px;
+  width: 90%;
+  max-width: 1000px;
+  background: #121826;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 20px rgba(0, 255, 136, 0.2);
 }
 
-.table-controls select {
-    padding: 8px 12px;
-    border-radius: 6px;
-    border: none;
-    font-size: 1rem;
-    cursor: pointer;
-}
-
-/* ============================
-   TABLE STYLES
-============================ */
 .table-wrapper {
-    overflow-x: auto;
+  overflow-x: auto;
 }
 
+/* ===== Table ===== */
 #cryptotable {
-    width: 100%;
-    border-collapse: collapse;
-    min-width: 600px;
-    box-shadow: 0 4px 12px rgba(0,255,136,0.1);
+  width: 100%;
+  border-collapse: collapse;
 }
 
-#cryptotable th, #cryptotable td {
-    padding: 12px;
-    text-align: center;
-    border-bottom: 1px solid #2d2d2d;
-    font-size: 0.95rem;
+#cryptotable th,
+#cryptotable td {
+  padding: 15px;
+  border-bottom: 1px solid #00c896;
+  text-align: left;
 }
 
 #cryptotable th {
-    background: #00cec9;
-    color: #121212;
-    font-weight: 600;
-    text-transform: uppercase;
-    cursor: pointer;
-    user-select: none;
-}
-
-#cryptotable tr:nth-child(even) {
-    background: rgba(255,255,255,0.05);
+  background: #00c896;
+  color: #000;
+  font-weight: 600;
 }
 
 #cryptotable tr:hover {
-    background: rgba(0,255,136,0.1);
-    transition: background 0.3s ease;
+  background: rgba(0, 255, 136, 0.1);
 }
 
-/* CHANGE COLORS */
-.change-positive { color: #00ff88; font-weight: bold; }
-.change-negative { color: #ff4d4d; font-weight: bold; }
-
-/* SPARKLINE */
-.sparkline { width: 100px; height: 40px; }
-
-/* ============================
-   FOOTER
-============================ */
-footer.footer {
-    text-align: center;
-    padding: 15px 0;
-    background: #1f1f1f;
-    color: #888;
-    font-size: 0.9rem;
-    margin-top: auto;
+/* ===== Footer ===== */
+footer {
+  margin: 30px 0 10px;
+  text-align: center;
+  color: #aaa;
+  font-size: 0.9rem;
 }
 
-/* ============================
-   RESPONSIVE
-============================ */
+footer a {
+  color: #00c896;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* ===== Responsive ===== */
 @media (max-width: 768px) {
-    .table-controls { flex-direction: column; }
-    .table-controls input, .table-controls select { margin-bottom: 10px; }
-    header h1 { font-size: 1.4rem; }
-    #cryptotable th, #cryptotable td { padding: 8px; font-size: 0.85rem; }
-}
-
-@media (max-width: 480px) {
-    .sparkline { width: 80px; height: 30px; }
-}
-=======
-/* ============================
-   BASE STYLES
-============================ */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #121212;
-    color: #e0e0e0;
-    display: flex;
+  .header {
     flex-direction: column;
-    min-height: 100vh;
-}
+    gap: 10px;
+  }
 
-/* ============================
-   HEADER
-============================ */
-header.header {
-    width: 100%;
-    background: linear-gradient(90deg, #00b894, #00cec9);
-    color: #fff;
-    position: sticky;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    padding: 15px 20px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-}
+  .header h1 {
+    font-size: 1.2rem;
+  }
 
-header h1 {
-    font-size: 1.8rem;
-}
-
-/* ============================
-   TABLE CONTROLS
-============================ */
-.table-controls {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin: 20px 0;
-}
-
-.table-controls input[type="text"] {
-    padding: 8px 12px;
-    border-radius: 6px;
-    border: none;
-    width: 250px;
-    max-width: 100%;
-    font-size: 1rem;
-    margin-bottom: 10px;
-}
-
-.table-controls select {
-    padding: 8px 12px;
-    border-radius: 6px;
-    border: none;
-    font-size: 1rem;
-    cursor: pointer;
-}
-
-/* ============================
-   TABLE STYLES
-============================ */
-.table-wrapper {
-    overflow-x: auto;
-}
-
-#cryptotable {
-    width: 100%;
-    border-collapse: collapse;
-    min-width: 600px;
-    box-shadow: 0 4px 12px rgba(0,255,136,0.1);
-}
-
-#cryptotable th, #cryptotable td {
-    padding: 12px;
-    text-align: center;
-    border-bottom: 1px solid #2d2d2d;
-    font-size: 0.95rem;
-}
-
-#cryptotable th {
-    background: #00cec9;
-    color: #121212;
-    font-weight: 600;
-    text-transform: uppercase;
-    cursor: pointer;
-    user-select: none;
-}
-
-#cryptotable tr:nth-child(even) {
-    background: rgba(255,255,255,0.05);
-}
-
-#cryptotable tr:hover {
-    background: rgba(0,255,136,0.1);
-    transition: background 0.3s ease;
-}
-
-/* CHANGE COLORS */
-.change-positive { color: #00ff88; font-weight: bold; }
-.change-negative { color: #ff4d4d; font-weight: bold; }
-
-/* SPARKLINE */
-.sparkline { width: 100px; height: 40px; }
-
-/* ============================
-   FOOTER
-============================ */
-footer.footer {
-    text-align: center;
-    padding: 15px 0;
-    background: #1f1f1f;
-    color: #888;
+  .filter select {
     font-size: 0.9rem;
-    margin-top: auto;
-}
+  }
 
-/* ============================
-   RESPONSIVE
-============================ */
-@media (max-width: 768px) {
-    .table-controls { flex-direction: column; }
-    .table-controls input, .table-controls select { margin-bottom: 10px; }
-    header h1 { font-size: 1.4rem; }
-    #cryptotable th, #cryptotable td { padding: 8px; font-size: 0.85rem; }
+  #cryptotable th, #cryptotable td {
+    padding: 10px;
+  }
 }
-
-@media (max-width: 480px) {
-    .sparkline { width: 80px; height: 30px; }
-}
->>>>>>> d8ad4505eb22f2cbba0ce8711c64c7899058a3ad

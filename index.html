@@ -1,115 +1,46 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crypto Dashboard</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- Chart.js CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crypto Price Tracker</title>
+  <meta name="description" content="Live crypto price tracker showing real-time market data, price changes, and easy filters for USD-based coins.">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <header class="header">
+    <h1>Crypto Price Tracker</h1>
+    <div class="filter">
+      <label for="price-filter">Filter by Price:</label>
+      <select id="price-filter">
+        <option value="all">All</option>
+        <option value="below1">Below $1</option>
+        <option value="below5">$1 - $5</option>
+        <option value="below10">$5 - $10</option>
+      </select>
+    </div>
+  </header>
 
-    <!-- HEADER -->
-    <header class="header">
-        <div class="header-container">
-            <h1>Crypto Dashboard</h1>
-        </div>
-    </header>
+  <main class="container">
+    <div class="table-wrapper">
+      <table id="cryptotable">
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Price (USD)</th>
+            <th scope="col">Change (24h)</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </main>
 
-    <!-- MAIN CONTENT -->
-    <main class="container">
-        <div class="table-controls">
-            <input type="text" id="search" placeholder="Search coin by name..." />
-            <select id="price-filter">
-                <option value="all">All</option>
-                <option value="below1">Below $1</option>
-                <option value="below5">$1 - $5</option>
-                <option value="below10">$5 - $10</option>
-            </select>
-        </div>
+  <footer>
+    <p>Powered by <a href="https://www.coingecko.com/" target="_blank" rel="noopener">CoinGecko API</a></p>
+  </footer>
 
-        <div class="table-wrapper">
-            <table id="cryptotable">
-                <thead>
-                    <tr>
-                        <th data-sort="name">Name &#x25B2;</th>
-                        <th data-sort="current_price">Price (USD) &#x25B2;</th>
-                        <th data-sort="price_change_percentage_24h">24h Change &#x25B2;</th>
-                        <th data-sort="market_cap">Market Cap &#x25B2;</th>
-                        <th data-sort="total_volume">24h Volume &#x25B2;</th>
-                        <th>7d Trend</th>
-                    </tr>
-                </thead>
-                <tbody></tbody>
-            </table>
-        </div>
-    </main>
-
-    <footer class="footer">
-        <p>Crypto Dashboard &copy; 2025</p>
-    </footer>
-
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
 
-=======
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crypto Dashboard</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- Chart.js CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-</head>
-<body>
-
-    <!-- HEADER -->
-    <header class="header">
-        <div class="header-container">
-            <h1>Crypto Dashboard</h1>
-        </div>
-    </header>
-
-    <!-- MAIN CONTENT -->
-    <main class="container">
-        <div class="table-controls">
-            <input type="text" id="search" placeholder="Search coin by name..." />
-            <select id="price-filter">
-                <option value="all">All</option>
-                <option value="below1">Below $1</option>
-                <option value="below5">$1 - $5</option>
-                <option value="below10">$5 - $10</option>
-            </select>
-        </div>
-
-        <div class="table-wrapper">
-            <table id="cryptotable">
-                <thead>
-                    <tr>
-                        <th data-sort="name">Name &#x25B2;</th>
-                        <th data-sort="current_price">Price (USD) &#x25B2;</th>
-                        <th data-sort="price_change_percentage_24h">24h Change &#x25B2;</th>
-                        <th data-sort="market_cap">Market Cap &#x25B2;</th>
-                        <th data-sort="total_volume">24h Volume &#x25B2;</th>
-                        <th>7d Trend</th>
-                    </tr>
-                </thead>
-                <tbody></tbody>
-            </table>
-        </div>
-    </main>
-
-    <footer class="footer">
-        <p>Crypto Dashboard &copy; 2025</p>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
-</html>
-
->>>>>>> d8ad4505eb22f2cbba0ce8711c64c7899058a3ad
